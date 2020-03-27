@@ -1,0 +1,50 @@
+使用的标签：<scope>
+//<dependency>的子标签，建议写在<version>下面
+
+依赖范围：
+main代码编译，但没有运行
+test代码编译、运行
+main代码运行
+//就是项目运行时
+
+选项：
+compile（默认）：全部有效
+test：只对test代码有效
+//如junit
+provided：仅main代码运行前有效
+//如servlet-api
+runtime：仅main代码运行时有效
+//如jdbc驱动
+
+
+依赖传递：
+传递后的依赖不需要重新配置，可以继承使用
+例：
+有项目maven1、maven2、maven3，2依赖1,3依赖2
+如果2对1的依赖被指定为test
+那么依赖不能被传递（3不能使用1的依赖）
+//指定为compile时才能传递
+
+依赖传递有就近原则，如果1和2使用相同种类但是不同版本的依赖，3在继承的时候会就近使用2
+
+
+传递可选：选择当前依赖是否可传递
+<optional>标签
+选项为true则不传递，选项为false则传递
+
+继承排除：
+继承某个项目的依赖时，可以排除其中的部分项目
+使用<exclusion>标签
+<dependencies>
+    <dependency>
+        <groupId></groupId>
+        <artifactId></artifactId>
+        <version></version>
+		<exclusions>
+			<exclusion>
+				<groupId></groupId>
+				<artifactId></artifactId>
+			</exclusion>
+		</exclusions>
+    </dependency>
+</dependencies>

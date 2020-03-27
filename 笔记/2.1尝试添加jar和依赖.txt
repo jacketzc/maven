@@ -1,0 +1,17 @@
+在pom.xml中添加依赖标签
+一组jar/依赖使用<dependencies>包裹
+单个jar/依赖使用<dependency>包裹
+<dependencies>
+    <dependency>
+        <groupId>junit</groupId>
+		//依赖所在的组
+        <artifactId>junit</artifactId>
+		//依赖的项目
+        <version>4.10</version>
+    </dependency>
+</dependencies>
+
+
+创建maven项目时，groupId和artifactId都已经填写过了，所以当别的项目需要引用该项目的jar时，应该知道该怎么填写
+
+//构建maven项目后，IDE工具自动导入的jar都是使用maven

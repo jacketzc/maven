@@ -1,0 +1,9 @@
+GAV主要组成：
+
+groupId：当前maven组织名称（比如com.jac）
+artifactId:项目名称
+version：需要的版本
+
+坐标查找
+建议的网站：mvnrepository.com
+

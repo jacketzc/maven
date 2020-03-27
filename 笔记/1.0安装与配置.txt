@@ -1,0 +1,11 @@
+下载Maven组件
+//运行需要jdk
+网站：http://maven.apache.org/download.cgi
+版本：
+	win：apache-maven-3.6.3-bin.zip
+	linux：apache-maven-3.6.3-bin.tar.gz
+	
+解压，并且配置环境变量
+新建系统变量MAVEN_HOME，地址填解压目录
+//如D:\Jacketzc\apache-maven-3.6.3
+在path中添加：%MAVEN_HOME%\bin

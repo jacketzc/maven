@@ -1,0 +1,29 @@
+mvn compile
+完成编译操作，执行完毕后，生成target目录，该目录存放编译后的字节码文件
+//就是把.java文件编译成.class文件
+//target目录包括classes、maven-status两个文件夹
+
+mvn clear
+将target目录清除
+
+mvn test
+将代码和测试代码编译，生成target目录
+//该目录包括classes、maven-status、test-classes三个文件夹
+
+mvn package
+将项目打包成jar（或者是war）
+//测试目录中的代码不会被打包
+
+mvn install
+将打包好的jar安装到本地maven仓库中
+//没有打包回自动打包
+pom.xml中指定<version>后，maven会根据不同版本为项目添加不同目录
+
+
+
+组合命令
+mvn clean compile
+mvn clean package
+mvn clean install
+mvn clean test
+//先清除再。。。

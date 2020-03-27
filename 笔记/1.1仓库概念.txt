@@ -1,0 +1,16 @@
+仓库就是存放jar的仓库
+使用maven引入jar包时，会先从本地仓库引入，如果没有，则从网上的仓库获取
+//提高了jar包的复用率，不需要创建一个项目就重新复制一份jar
+
+默认位置：C:\Users\jacke\.m2\repository
+//用户根目录开始
+
+修改默认镜像为阿里云：
+在setting.xml中添加
+<mirror>
+	<id>alimaven</id>
+    <name>aliyun maven</name>
+    <url>http://maven.aliyun.com/nexus/content/repositories/central/</url>
+    <mirrorOf>central</mirrorOf>
+</mirror>            
+        
